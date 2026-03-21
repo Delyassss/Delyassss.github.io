@@ -72,7 +72,7 @@ Deploy StudyDeck to GitHub Pages and get a **FREE live URL** in 15 minutes!
 
 **Result:** See message: "Your site is published at..."
 
-**Your URL:** `https://yourusername.github.io` ✅
+**Your URL:** `https://Delyassss.github.io` ✅
 
 ---
 
