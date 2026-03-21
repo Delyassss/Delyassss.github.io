@@ -2,7 +2,7 @@
 
 A powerful, offline-first flashcard app to help you study smarter and retain more.
 
-**[🚀 Open StudyDeck](https://yourusername.github.io)** (Replace with your username)
+**[🚀 Open StudyDeck](https://Delyassss.github.io)**
 
 ---
 
@@ -49,7 +49,7 @@ A powerful, offline-first flashcard app to help you study smarter and retain mor
 ## 🚀 Quick Start
 
 ### Web Version (Free)
-1. Open: **https://yourusername.github.io**
+1. Open: **https://Delyassss.github.io**
 2. Create a new deck
 3. Add flashcards
 4. Click "Study" to begin
@@ -214,7 +214,7 @@ Having issues?
 
 ## 🚀 Getting Started
 
-1. **Visit:** https://yourusername.github.io
+1. **Visit:** https://Delyassss.github.io
 2. **Create a deck** ➕
 3. **Add cards** 📝
 4. **Study** 📖

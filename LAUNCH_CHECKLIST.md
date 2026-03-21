@@ -80,7 +80,7 @@ Deploy StudyDeck to GitHub Pages and get a **FREE live URL** in 15 minutes!
 
 ```
 1. Open browser
-2. Type: https://yourusername.github.io
+2. Type: https://Delyassss.github.io
 3. Should see StudyDeck loading
 4. Test features:
    ✓ Create a deck
@@ -98,7 +98,7 @@ Deploy StudyDeck to GitHub Pages and get a **FREE live URL** in 15 minutes!
 ### ⏱️ Step 5: Share with World (5 min)
 
 ```
-1. Copy your URL: https://yourusername.github.io
+1. Copy your URL: https://Delyassss.github.io
 2. Share on:
    • Reddit (r/learnprogramming, r/students)
    • Twitter #edtech #learning
@@ -143,22 +143,6 @@ Deploy StudyDeck to GitHub Pages and get a **FREE live URL** in 15 minutes!
 ✅ **Auto-deploy** (changes push instantly)
 ✅ **Offline support** (Service Worker included)
 ✅ **PWA ready** (can install as app)
-
----
-
-## 📊 Example URLs
-
-If your GitHub username is **john**:
-```
-Your repo: github.com/john/john.github.io
-Your app: https://john.github.io
-```
-
-If your GitHub username is **sarah_learning**:
-```
-Your repo: github.com/sarah_learning/sarah_learning.github.io
-Your app: https://sarah_learning.github.io
-```
 
 ---
 
