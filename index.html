@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-8234382993410297~6181025531"
-     crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyDeck - Flashcard App</title>
-    <link rel="manifest" href="./manifest.json">
-    <meta name="theme-color" content="#667eea">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="StudyDeck">
-    <style>
-        * {
-            margin: 0;
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StudyDeck - Flashcard App</title>
+        <link rel="manifest" href="./manifest.json">
+        <meta name="theme-color" content="#667eea">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="StudyDeck">
+        <style>
+            * {
+                margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
             --primary: #667eea;
             --secondary: #764ba2;
@@ -29,13 +27,13 @@
             --text-light: #7f8c8d;
             --border: #ecf0f1;
         }
-
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--bg-light);
             color: var(--text-dark);
         }
-
+        
         body.dark-mode {
             --bg-light: #1a1a2e;
             --bg-white: #16213e;
@@ -43,13 +41,13 @@
             --text-light: #b0b0b0;
             --border: #0f3460;
         }
-
+        
         .container {
             max-width: 500px;
             margin: 0 auto;
             padding: 20px;
         }
-
+        
         .header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -57,12 +55,12 @@
             border-radius: 20px;
             margin-bottom: 25px;
         }
-
+        
         .header h1 {
             font-size: 28px;
             font-weight: 700;
         }
-
+        
         .card {
             background: var(--bg-white);
             border-radius: 20px;
@@ -70,12 +68,12 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             margin-bottom: 20px;
         }
-
+        
         .card h2 {
             font-size: 22px;
             margin-bottom: 20px;
         }
-
+        
         .deck-row {
             display: flex;
             gap: 10px;
@@ -83,7 +81,7 @@
             align-items: center;
             transition: all 0.4s ease;
         }
-
+        
         .deck-row.deleting {
             opacity: 0;
             transform: translateX(-100%);
@@ -91,7 +89,7 @@
             margin: 0;
             overflow: hidden;
         }
-
+        
         .deck-item {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -101,22 +99,22 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-
+        
         .deck-item:hover {
             transform: translateY(-4px);
         }
-
+        
         .deck-item h3 {
             font-size: 17px;
             margin-bottom: 6px;
             font-weight: 600;
         }
-
+        
         .deck-item p {
             font-size: 13px;
             opacity: 0.9;
         }
-
+        
         button {
             border: none;
             border-radius: 12px;
@@ -126,7 +124,7 @@
             font-size: 14px;
             transition: all 0.3s;
         }
-
+        
         .tab-btn {
             flex: 1;
             padding: 12px;
@@ -138,19 +136,19 @@
             font-size: 13px;
             color: var(--text-light);
         }
-
+        
         .tab-btn.active {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
         }
-
+        
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
             margin-bottom: 25px;
         }
-
+        
         .stat-box {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -158,13 +156,13 @@
             border-radius: 16px;
             text-align: center;
         }
-
+        
         .stat-number {
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 8px;
         }
-
+        
         .timer-display {
             width: 240px;
             height: 240px;
@@ -179,7 +177,7 @@
             font-weight: 700;
             margin-bottom: 30px;
         }
-
+        
         .flashcard {
             height: 320px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -198,7 +196,7 @@
             overflow-y: auto;
             transition: all 0.3s;
         }
-
+        
         .progress-bar {
             width: 100%;
             height: 8px;
@@ -207,13 +205,13 @@
             overflow: hidden;
             margin-bottom: 15px;
         }
-
+        
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
             transition: width 0.5s ease;
         }
-
+        
         .card-item {
             background: var(--bg-light);
             padding: 16px;
@@ -224,14 +222,14 @@
             align-items: center;
             transition: all 0.4s ease;
         }
-
+        
         .card-item.deleting {
             opacity: 0;
             transform: translateX(-100%);
             height: 0;
             margin: 0;
         }
-
+        
         .toggle {
             width: 54px;
             height: 30px;
@@ -241,11 +239,11 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-
+        
         .toggle.on {
             background: var(--success);
         }
-
+        
         .toggle-dot {
             width: 26px;
             height: 26px;
@@ -256,11 +254,11 @@
             left: 2px;
             transition: left 0.3s;
         }
-
+        
         .toggle.on .toggle-dot {
             left: 25px;
         }
-
+        
         .settings-item {
             padding: 16px 0;
             border-bottom: 1px solid var(--border);
@@ -268,12 +266,12 @@
             justify-content: space-between;
             align-items: center;
         }
-
+        
         input[type="range"] {
             width: 100%;
             margin: 15px 0;
         }
-
+        
         .back-btn {
             margin-bottom: 20px;
             padding: 12px 20px;
@@ -284,24 +282,24 @@
             font-weight: 600;
             color: var(--text-dark);
         }
-
+        
         .study-info {
             background: var(--bg-white);
             padding: 20px;
             border-radius: 16px;
             margin-bottom: 20px;
         }
-
+        
         .answer-buttons {
             display: flex;
             gap: 12px;
             margin-bottom: 20px;
         }
-
+        
         .answer-buttons button {
             flex: 1;
         }
-
+        
         .score-result {
             text-align: center;
             padding: 40px 30px;
@@ -310,13 +308,13 @@
             color: white;
             margin-bottom: 25px;
         }
-
+        
         .score-result h2 {
             font-size: 56px;
             margin-bottom: 12px;
             color: #ffd700;
         }
-
+        
         .btn-primary {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -325,34 +323,34 @@
         .btn-primary:hover {
             transform: translateY(-2px);
         }
-
+        
         .btn-danger {
             background: var(--danger);
             color: white;
             padding: 10px 16px;
             font-size: 12px;
         }
-
+        
         .btn-danger:hover {
             transform: translateY(-2px);
         }
-
+        
         .btn-secondary {
             background: var(--bg-light);
             color: var(--text-dark);
             border: 1.5px solid var(--border);
         }
-
+        
         .button-group {
             display: flex;
             gap: 12px;
             margin-top: 20px;
         }
-
+        
         .button-group button {
             flex: 1;
         }
-
+        
         input[type="text"],
         textarea {
             width: 100%;
@@ -365,26 +363,26 @@
             background: var(--bg-white);
             color: var(--text-dark);
         }
-
+        
         textarea {
             resize: vertical;
             min-height: 90px;
         }
-
+        
         .empty-state {
             text-align: center;
             padding: 50px 20px;
             color: var(--text-light);
         }
-
+        
         .view {
             display: none;
         }
-
+        
         .view.active {
             display: block;
         }
-
+        
         .modal {
             display: none;
             position: fixed;
@@ -397,11 +395,11 @@
             align-items: center;
             justify-content: center;
         }
-
+        
         .modal.show {
             display: flex;
         }
-
+        
         .modal-content {
             background: var(--bg-white);
             padding: 30px;
@@ -410,31 +408,33 @@
             text-align: center;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
-
+        
         .modal-content h2 {
             font-size: 22px;
             margin-bottom: 15px;
             color: var(--text-dark);
         }
-
+        
         .modal-content p {
             color: var(--text-light);
             margin-bottom: 25px;
             font-size: 14px;
         }
-
+        
         .modal-content button {
             width: 100%;
             margin-bottom: 10px;
         }
     </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-8234382993410297~6181025531"
+ crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>📚 StudyDeck</h1>
         </div>
-
+        
         <!-- TAB BUTTONS -->
         <div style="display: flex; gap: 8px; margin-bottom: 25px; background: var(--bg-white); padding: 8px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);">
             <button class="tab-btn active" onclick="showDecksView()">📚 Decks</button>
@@ -447,8 +447,8 @@
         <div style="text-align: center; margin: 20px 0;">
   <ins class="adsbygoogle"
        style="display:inline-block;width:320px;height:50px"
-       data-ad-client="ca-pub-YOUR_ID"
-       data-ad-slot="YOUR_AD_SLOT_ID"></ins>
+       data-ad-client="ca-app-pub-8234382993410297~6181025531"
+       data-ad-slot="9029015306"></ins>
 </div>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
@@ -584,6 +584,15 @@
                     <h2 id="score">80%</h2>
                     <p id="scoreDetails"></p>
                 </div>
+                 <div style="text-align: center; margin: 20px 0; background: var(--bg-light); padding: 10px; border-radius: 12px;">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-app-pub-8234382993410297~6181025531"
+                         data-ad-slot="9029015306"></ins>
+                </div>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
                 <button class="btn-primary" onclick="startStudy()" style="width: 100%; margin-bottom: 10px;">Study Again</button>
                 <button class="btn-secondary" onclick="showDecksView()" style="width: 100%;">Back</button>
             </div>
