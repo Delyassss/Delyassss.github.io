@@ -125,7 +125,6 @@ Download from Google Play Store (launching soon!)
 - ✅ All data stored locally on your device
 - ✅ No server, no cloud sync
 - ✅ No tracking or analytics
-- ✅ No ads
 - ✅ Completely private & secure
 
 ---
